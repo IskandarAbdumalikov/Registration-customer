@@ -1,24 +1,42 @@
 .to__home-page__btn {
-    padding: 6px 13px;
-    border: 2px solid $primaryColor;
-    background-color: transparent;
-    border-radius: 2px;
-    font-size: 16px;
-    font-weight: 600;
-    transition: 0.3s;
-    color: $primaryColor;
+  padding: 6px 13px;
+  border: 2px solid $primaryColor;
+  background-color: transparent;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+  color: $primaryColor;
 }
 
 .to__home-page__btn:hover {
-    border-color: $hoverColor;
-    background: $hoverColor;
-    color: $secondaryColor;
+  border-color: $hoverColor;
+  background: $hoverColor;
+  color: $secondaryColor;
 }
 
-.codears__section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-    padding-top: 120px;
+.codears__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding-top: 120px;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 20px;
+}
+.images img {
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .images {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+  }
 }
