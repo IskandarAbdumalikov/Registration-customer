@@ -1,9 +1,10 @@
 #hero {
-  padding: 120px 0px;
   display: flex;
   flex-direction: column;
   gap: 50px;
   height: 100vh;
+  margin: 150px auto;
+  z-index: 999999999;
 }
 .form {
   display: flex;
@@ -35,7 +36,15 @@ select {
 .registrate__btn {
   border: none;
   background: linear-gradient(90deg, black, black, violet, black, black);
-  transition: 0.5s;
+  transition: 0.6s;
+  background-size: 200%;
+  color: white;
+}
+
+.remove__btn{
+  border: none;
+  background: linear-gradient(90deg,  violet, black, black, black);
+  transition: 0.6s;
   background-size: 200%;
   color: white;
 }
@@ -44,6 +53,9 @@ select {
   background-position: 200%;
 }
 
+.remove__btn:hover{
+  background-position: 200%;
+}
 .customer__inputs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

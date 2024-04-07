@@ -1,4 +1,4 @@
-let customer = [
+let customer = JSON.parse(localStorage.getItem("users")) || [
   {
     fname: "Laylo",
     lname: "Aliyeva",
@@ -79,6 +79,7 @@ form.addEventListener("submit", (e) => {
   };
   customer.push(newUser);
   createNewUser(customer);
+  localStorage.setItem("users", JSON.stringify(customer));
 
   firstName.value = "";
   lastName.value = "";
@@ -145,4 +146,16 @@ function filterString(value, type) {
 
 filterRegion.addEventListener("change", (e) => {
   filterString(e.target.value, "region");
+});
+
+let removeButton = document.querySelector(".remove__btn");
+
+removeButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  localStorage.removeItem("users");
+  while (tbody.firstChild) {
+    tbody.firstChild.remove();
+  }
+
+  customer = JSON.parse(localStorage.getItem("users")) || [];
 });
