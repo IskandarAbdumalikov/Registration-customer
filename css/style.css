@@ -475,7 +475,7 @@ select {
 .images {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -487,7 +487,7 @@ select {
   .images {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 1fr);
   }
 }
 footer {

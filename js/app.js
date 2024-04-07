@@ -159,3 +159,4 @@ removeButton.addEventListener("click", (e) => {
 
   customer = JSON.parse(localStorage.getItem("users")) || [];
 });
+
